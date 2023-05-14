@@ -11,13 +11,10 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import Input from "@mui/material/Input";
 import Image from "next/image";
 
-const pages = [
-	"Account",
-	"Contact",
-	"Cart",
-];
+const pages = ["Contact", "Cart"];
 const settings = ["Account", "Logout"];
 
 function ResponsiveAppBar() {
@@ -60,7 +57,9 @@ function ResponsiveAppBar() {
 	};
 
 	return (
-		<AppBar position="static">
+		<AppBar
+			position="static"
+			color="inherit">
 			<Container maxWidth="xl">
 				<Toolbar disableGutters>
 					<Image
@@ -68,6 +67,11 @@ function ResponsiveAppBar() {
 						alt="logo"
 						width={100}
 						height={100}
+					/>
+					<Input
+						margin="dense"
+						type="text"
+						placeholder="Search"
 					/>
 					<Box
 						sx={{
@@ -159,7 +163,9 @@ function ResponsiveAppBar() {
 									}
 									sx={{
 										my: 2,
-										color: "white",
+										color: "black",
+										fontWeight:
+											"bold",
 										display:
 											"block",
 									}}>
